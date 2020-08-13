@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+	<TemplateData>
+		<Name>VueCliTemplate</Name>
+		<Description>VueCliTemplate</Description>
+		<DefaultName>VueCliTemplate</DefaultName>
+		<TemplateID>f4936e1c-63a1-46c8-ba57-3c4fe9813b91</TemplateID>
+
+		<Icon>__TemplateIcon.ico</Icon>
+		<PreviewImage>__PreviewImage.png</PreviewImage>
+		<RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<ProvideDefaultName>true</ProvideDefaultName>
+
+		<PlatformTag>Windows</PlatformTag>
+		<PlatformTag>Linux</PlatformTag>
+		<PlatformTag>macOS</PlatformTag>
+		<LanguageTag>Vue</LanguageTag>
+		<LanguageTag>C#</LanguageTag>
+		<LanguageTag>CSharp</LanguageTag>
+		<ProjectTypeTag>Web</ProjectTypeTag>
+		<ProjectType>CSharp</ProjectType>
+
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<CreateInPlace>true</CreateInPlace>
+		<SupportsCodeSeparation>true</SupportsCodeSeparation>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="VueCliTemplate.csproj" ReplaceParameters="true">
+			<ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+			<ProjectItem ReplaceParameters="true">appsettings.Development.json</ProjectItem>
+			<ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">Startup.cs</ProjectItem>
+			<ProjectItem ReplaceParameters="true">WeatherForecast.cs</ProjectItem>
+			<Folder Name="Controllers">
+				<ProjectItem ReplaceParameters="true">WeatherForecastController.cs</ProjectItem>
+			</Folder>
+			<Folder Name="wwwroot">
+				<ProjectItem ReplaceParameters="false">.gitkeep</ProjectItem>
+			</Folder>
+			<Folder Name="Template\VueJsForBootstrapTemplate\ClientApp" TargetFolderName="ClientApp">
+				<Folder Name="public" TargetFolderName="public">
+					<ProjectItem ReplaceParameters="true" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+				</Folder>
+				<Folder Name="src" TargetFolderName="src">
+					<Folder Name="assets" TargetFolderName="assets">
+						<ProjectItem ReplaceParameters="true" TargetFileName="logo.png">logo.png</ProjectItem>
+					</Folder>
+					<Folder Name="components" TargetFolderName="components">
+						<ProjectItem ReplaceParameters="true" TargetFileName="Counter.vue">Counter.vue</ProjectItem>
+						<ProjectItem ReplaceParameters="true" TargetFileName="FetchData.vue">FetchData.vue</ProjectItem>
+						<ProjectItem ReplaceParameters="true" TargetFileName="Home.vue">Home.vue</ProjectItem>
+						<ProjectItem ReplaceParameters="true" TargetFileName="NavMenu.css">NavMenu.css</ProjectItem>
+						<ProjectItem ReplaceParameters="true" TargetFileName="NavMenu.vue">NavMenu.vue</ProjectItem>
+					</Folder>
+					<Folder Name="models" TargetFolderName="models">
+						<ProjectItem ReplaceParameters="true" TargetFileName="IWeatherForecast.ts">IWeatherForecast.ts</ProjectItem>
+					</Folder>
+					<ProjectItem ReplaceParameters="true" TargetFileName="App.vue">App.vue</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="custom.css">custom.css</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="main.ts">main.ts</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="router.ts">router.ts</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="shims-tsx.d.ts">shims-tsx.d.ts</ProjectItem>
+					<ProjectItem ReplaceParameters="true" TargetFileName="shims-vue.d.ts">shims-vue.d.ts</ProjectItem>
+				</Folder>
+				<ProjectItem ReplaceParameters="true" TargetFileName=".browserslistrc">.browserslistrc</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName=".gitignore">.gitignore</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="babel.config.js">babel.config.js</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="package-lock.json">package-lock.json</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="postcss.config.js">postcss.config.js</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="README.md">README.md</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="tslint.json">tslint.json</ProjectItem>
+				<ProjectItem ReplaceParameters="true" TargetFileName="vue.config.js">vue.config.js</ProjectItem>
+			</Folder>
+			<!--<Folder Name="ClientApp">
+				<ProjectItem ReplaceParameters="false">.gitkeep</ProjectItem>
+			</Folder>-->
+		</Project>
+	</TemplateContent>
+	<!--<WizardExtension>
+		<Assembly>VueProjectWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f65c370ed762aea6</Assembly>
+		<FullClassName>VueProjectWizard.WizardImplementation</FullClassName>
+	</WizardExtension>-->
+</VSTemplate>
